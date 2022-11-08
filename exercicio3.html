@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+
+<body>
+    <div>
+      <h3>Tabuada do 5</h3>
+      </div>
+      <button onclick="executar(event);">Executar</button>
+      <div id="resultado"></div>
+      <br>
+</body>
+
+
+<script>
+    function mostrarTexto(texto) {
+  document.getElementById("resultado").innerHTML += texto;
+}
+
+function executar(ev) {
+  ev.preventDefault();
+  var resultado = "<table><tr>";
+  
+  // Escrever aqui o código
+  
+  if (i=5) {
+    resultado = resultado + "<td>";
+    for (var j=1; j<=10; j=j+1) {
+      var multiplicacao = i*j;
+      var linha = "" + i + "x" + j + "=" + multiplicacao + "<br>";
+      resultado = resultado + linha;
+    }
+    resultado = resultado + "</td>";
+    if (i % 5 === 0) {
+      resultado = resultado + "<tr></tr>";
+    }
+  }
+  resultado = resultado + "</tr></table>";
+  mostrarTexto(resultado);
+
+}
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <div id="resultado">
+        <p> <label class="form-label">Números Pares de 1 a 10:</label></p>
+    </div>
+    <div>
+        <button onclick="executar(event);">Mostrar</button>
+    </div> 
+</body>
+<script>
+
+ function mostrarTexto(texto) {
+  document.getElementById("resultado").innerHTML += texto;
+}
+
+function executar(ev) {
+    ev.preventDefault();
+    var numerosPares = [];
+    for (i = 0; numerosPares.length <= 5; i++) {
+        if (i % 2 == 0) {
+            numerosPares.push(i);
+        }
+        console.log(numerosPares);
+    }
+    mostrarTexto(numerosPares);
+}
+console.log(executar(6));
+
+
+</script>
+</html>

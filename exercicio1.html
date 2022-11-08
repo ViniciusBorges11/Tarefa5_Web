@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+<body>
+    <div class="container">
+        <div class="col-md-3 ">
+            <label class="label-control">Operações de 10 e 100</label>
+         </div>
+        <div class="col-md-3 ">
+            <label class="form-label">Soma</label>
+        </div>
+        <div class="col-md-3 ">
+            <input type="text" id="txtSoma" class="form-control">
+        </div>
+        <div class="col-md-3 ">
+            <label class="form-label">Subtração</label>
+        </div>
+        <div class="col-md-3 ">
+            <input type="text" id="txtSub" class="form-control">
+        </div>
+        <div class="col-md-3 ">
+            <label class="form-label">Divisão</label>
+        </div>
+        <div class="col-md-3 ">
+            <input type="text" id="txtDiv" class="form-control">
+        </div>
+        <div class="col-md-3 ">
+            <label class="form-label">Multiplicação</label>
+        </div>
+        <div class="col-md-3 ">
+            <input type="text" id="txtMult" class="form-control">
+        </div>
+        
+        <div class="col-md-3 ">
+            <button onclick="mostrarNumero()" class="btn btn-success">Mostrar</button>
+        </div>
+    </div>
+    <script>
+          function mostrarNumero() {
+            var num1 = 10.0;
+            var num2 = 100.0;
+            
+            document.getElementById('txtSoma').value =
+            num1 + num2;
+
+            document.getElementById('txtSub').value =
+            num1 - num2;
+
+            document.getElementById('txtDiv').value =
+            num1 / num2;
+
+            document.getElementById('txtMult').value =
+            num1 * num2; 
+                        
+        }
+    </script>
+    <script>
+        alert('Operaçoes de 10 e 100');
+    </script>
+</body>
+</html>

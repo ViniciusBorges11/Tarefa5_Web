@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <div>
+      <p>Digite o número desejado para a tabuada:</p>
+        <label class="form-label">Número:</label>
+        <input type="text" id="txtNum1" class="form-control">
+        <div id="resultado"></div>
+        <button onclick="executar(event);">Executar</button>
+    </div> 
+</body>
+<script>
+    function mostrarTexto(texto) {
+  document.getElementById("resultado").innerHTML += texto;
+}
+
+function executar(ev) {
+  ev.preventDefault();
+  var resultado = "<table><tr>";
+    var num1 = document.getElementById('txtNum1');
+    var i = parseFloat(num1.value);
+
+  if (i<=10) {
+    resultado = resultado + "<td>";
+    for (var j=1; j<=10; j=j+1) {
+      var multiplicacao = i*j;
+      var linha = "" + i + "x" + j + "=" + multiplicacao + "<br>";
+      resultado = resultado + linha;
+    }
+    resultado = resultado + "</td>";
+    if (i % 5 === 0) {
+      resultado = resultado + "<tr></tr>";
+    }
+  }
+  resultado = resultado + "</tr></table>";
+  mostrarTexto(resultado);
+
+}
+</script>
+</html>

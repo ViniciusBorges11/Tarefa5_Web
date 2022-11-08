@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 ">
+                <label class="form-label">Número 1:</label>
+                <input type="text" id="txtNum1" class="form-control">
+            </div>
+            <div class="col-md-3 ">
+                <label class="form-label">Número 2:</label>
+                <input type="text" id="txtNum2" class="form-control">
+            </div>
+            <br>
+            <div class="col-md-3 ">
+                <label class="form-label">Soma</label>
+            </div>
+            <div class="col-md-3 ">
+                <input type="text" id="txtSoma" class="form-control">
+            </div>
+            <div class="col-md-3 ">
+                <label class="form-label">Subtração</label>
+            </div>
+            <div class="col-md-3 ">
+                <input type="text" id="txtSub" class="form-control">
+            </div>
+            <div class="col-md-3 ">
+                <label class="form-label">Divisão</label>
+            </div>
+            <div class="col-md-3 ">
+                <input type="text" id="txtDiv" class="form-control">
+            </div>
+            <div class="col-md-3 ">
+                <label class="form-label">Multiplicação</label>
+            </div>
+            <div class="col-md-3 ">
+                <input type="text" id="txtMult" class="form-control">
+            </div>
+            <br>
+            <div class="col-md-3 ">
+                <button onclick="mostrarNumero()" class="btn btn-success">Resultados</button>
+            </div>
+
+        </div>
+    </div>
+
+ <script>
+      function mostrarNumero() {
+            var num1 = document.getElementById('txtNum1');
+            var num2 = document.getElementById('txtNum2');
+            
+            document.getElementById('txtSoma').value =
+                        parseFloat(num1.value) + parseFloat(num2.value);
+            document.getElementById('txtSub').value =
+                        parseFloat(num1.value) - parseFloat(num2.value); 
+            document.getElementById('txtDiv').value =
+                        parseFloat(num1.value) / parseFloat(num2.value);
+            document.getElementById('txtMult').value =
+                        parseFloat(num1.value) * parseFloat(num2.value);
+        }
+ </script>   
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 ">
+                <label class="form-label">Custo Fabrica:</label>
+            </div>
+            <div class="col-md-3 ">
+                <input type="text" id="txtNum1" class="form-control">
+            </div>
+            <div class="col-md-3 ">
+                <label class="form-label">% distribuidor:</label>
+            </div>
+            <div class="col-md-3 ">
+                <input type="text" id="txtNum2" class="form-control">
+            </div>
+            <div class="col-md-3 ">
+                <label class="form-label">% impostos:</label>
+            </div>
+            <div class="col-md-3 ">
+                <input type="text" id="txtNum3" class="form-control">
+            </div>
+            <br>
+            <div class="col-md-3 ">
+                <input type="text" id="txtResultado" class="form-control">
+            </div>
+            <button onclick="executar(event);">Mostrar</button>
+        </div>
+    </div>
+    <div id="resultado"></div>
+    
+</body>
+<script>
+    function mostrarTexto(texto) {
+  document.getElementById("resultado").innerHTML += texto;
+}
+    function executar(ev){
+        var custoFabrica = parseFloat(document.getElementById("txtNum1").value);
+        console.log(custoFabrica);
+        var percDistribuidor = parseFloat(document.getElementById("txtNum2").value) / 100;
+        console.log(percDistribuidor);
+        var percImpostos = parseFloat(document.getElementById("txtNum3").value) / 100;
+        console.log(percImpostos);
+        var custoFinal = custoFabrica + (custoFabrica * percDistribuidor) + (custoFabrica * percImpostos);
+        document.getElementById('txtResultado').value = custoFinal;
+        console.log(custoFinal);
+    }
+</script>
+</html>
